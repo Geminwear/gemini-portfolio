@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemini Night Wears</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+  <img src="your-logo.png" alt="Gemini Night Wears Logo" />
+</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <!-- <a href="#legacy">Legacy</a> -->
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Stylish Comfort, Night After Night</h1>
+      <p>Gemini Night Wears has been redefining cozy sleepwear for women and kids for 28 years. Trusted by generations, designed for dreams.</p>
+      <a class="button" href="https://geminiwear.com/" target="_blank">Visit Our Store</a>
+      <div class="social-icons">
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/918100153263" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sections">
+    <div class="section" id="about">
+      <h2>About Us</h2>
+      <p>With a rich legacy of nearly three decades, Gemini Night Wears is synonymous with style and comfort. We bring luxurious nightwear collections designed thoughtfully for modern women and playful little dreamers alike.</p>
+    </div>
+
+    <div class="section" id="collections">
+      <h2>Our Collections</h2>
+      <p>From breathable cotton sets to luxurious satin nightsuits, Gemini offers a wide range of women’s and kids’ nightwear perfect for every mood and season.</p>
+    </div>
+
+    <div class="section" id="legacy">
+      <h2>28 Years of Trust</h2>
+      <p>Started with a dream, built with love — Gemini Night Wears has grown from a humble workshop into a leading nightwear brand trusted by thousands of households across India.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Get in Touch</h2>
+      <p>Email us at: <strong>hello@gemininightwears.com</strong><br>
+         Call us: <strong>+91 81001 53263</strong></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Gemini Night Wears. All rights reserved.
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
