@@ -2,89 +2,826 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gemini Night Wears</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeminiWear - Premium Apparel Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
-<body>
+<body class="bg-gray-50">
+    <!-- Sticky Navigation -->
+    <header class="sticky-nav">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <img src="firstlogo.png"
+                        alt="GeminiWear company logo - modern minimalist textile design with two parallel G shapes forming a stylish monogram"
+                        class="h-12" />
+                </a>
+            </div>
 
-    <header>
-        <div class="logo">
-            <img src="your-logo.png" alt="Gemini Night Wears Logo" />
-        </div>
-        <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#collections">Collections</a>
-            <!-- <a href="#legacy">Legacy</a> -->
-            <a href="#contact">Contact</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-amber-500 transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-amber-500 transition duration-300">About</a>
+                <a href="#products" class="text-gray-700 hover:text-amber-500 transition duration-300">Products</a>
+                <a href="#services" class="text-gray-700 hover:text-amber-500 transition duration-300">Services</a>
+                <a href="#contact" class="text-gray-700 hover:text-amber-500 transition duration-300">Contact</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-20 left-0 right-0 bg-white shadow-lg rounded-b-lg mx-4">
+                <div class="flex flex-col space-y-4 p-6">
+                    <a href="#home" class="text-gray-700 hover:text-red-600 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 transition duration-300">About</a>
+                    <a href="#products" class="text-gray-700 hover:text-red-600 transition duration-300">Products</a>
+                    <a href="#services" class="text-gray-700 hover:text-red-600 transition duration-300">Services</a>
+                    <a href="#contact" class="text-gray-700 hover:text-red-600 transition duration-300">Contact</a>
+                </div>
+            </div>
         </nav>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
     </header>
 
-    <section class="hero">
-        <div>
-            <h1>Stylish Comfort, Night After Night</h1>
-            <p>Gemini Night Wears has been redefining cozy sleepwear for women and kids for 28 years. Trusted by
-                generations, designed for dreams.</p>
-            <a class="button" href="https://geminiwear.com/" target="_blank">Visit Our Store</a>
-            <div class="social-icons">
-                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/918100153263" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 bg-gradient-to-r from-gray-100 to-gray-200">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 slide-in">
+                <h1 class="hero-text text-5xl font-bold text-gray-800 leading-tight mb-6">
+                    Premium Apparel <br>
+                    <span class="text-red-600">Designed for You</span>
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 max-w-lg">
+                    GeminiWear blends modern fashion with timeless comfort. Our high-quality apparel is designed to
+                    elevate your everyday wardrobe with premium fabrics and sustainable practices.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#products"
+                        class="btn bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium">
+                        Shop Now
+                    </a>
+                    <a href="#about"
+                        class="btn border-2 border-gray-700 hover:bg-gray-700 hover:text-white px-8 py-3 rounded-full font-medium">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center">
+                <img src="post1.png"
+                    alt="Stylish urban fashion models wearing GeminiWear collection in a studio setting with natural lighting and minimalist background"
+                    class="rounded-lg shadow-xl max-w-full h-auto" />
             </div>
         </div>
     </section>
 
-    <section class="sections">
-        <div class="section" id="about">
-            <h2>About Us</h2>
-            <p>With a rich legacy of nearly three decades, Gemini Night Wears is synonymous with style and comfort. We
-                bring luxurious nightwear collections designed thoughtfully for modern women and playful little dreamers
-                alike.</p>
-        </div>
-
-        <div class="section" id="collections">
-            <h2>Our Collections</h2>
-            <p>From breathable cotton sets to luxurious satin nightsuits, Gemini offers a wide range of women’s and
-                kids’ nightwear perfect for every mood and season.</p>
-        </div>
-
-        <div class="section" id="legacy">
-            <h2>28 Years of Trust</h2>
-            <p>Started with a dream, built with love — Gemini Night Wears has grown from a humble workshop into a
-                leading nightwear brand trusted by thousands of households across India.</p>
-        </div>
-
-        <div class="section" id="contact">
-            <h2>Get in Touch</h2>
-            <p>Email us at: <strong>hello@gemininightwears.com</strong><br>
-                Call us: <strong>+91 81001 53263</strong></p>
+    <!-- Logo Showcase Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="w-full md:w-auto px-6 py-4">
+                    <img src="ITEM1.png"
+                        alt="Certified Sustainable Apparel logo showing environmental certification for GeminiWear products"
+                        class="h-12 mx-auto opacity-70 hover:opacity-100 transition duration-300 " />
+                </div>
+                <div class="w-full md:w-auto px-6 py-4">
+                    <img src="ITEM2.png"
+                        alt="Premium Materials Guaranteed badge showing GeminiWear's commitment to quality fabrics"
+                        class="h-12 mx-auto opacity-70 hover:opacity-100 transition duration-300 " />
+                </div>
+                <div class="w-full md:w-auto px-6 py-4">
+                    <img src="ITEM3.png" alt="Ethically Made certification logo for GeminiWear's fair labor practices"
+                        class="h-12 mx-auto opacity-70 hover:opacity-100 transition duration-300 " />
+                </div>
+                <div class="w-full md:w-auto px-6 py-4">
+                    <img src="ITEM4.png"
+                        alt="Style Magazine Award 2023 logo recognizing GeminiWear's innovative designs"
+                        class="h-12 mx-auto opacity-70 hover:opacity-100 transition duration-300 " />
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        © 2025 Gemini Night Wears. All rights reserved.
+    <!-- Carousel Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Collections</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Discover our curated seasonal collections designed for comfort and style.
+            </p>
+
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Carousel -->
+                <div class="carousel-container relative overflow-hidden rounded-xl shadow-lg">
+                    <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item min-w-full flex flex-col md:flex-row">
+                            <div class="md:w-1/2 p-8 bg-white flex flex-col justify-center">
+                                <span class="text-red-600 font-medium mb-2">NEW COLLECTION</span>
+                                <h3 class="text-3xl font-bold text-gray-800 mb-4">Urban Elegance</h3>
+                                <p class="text-gray-600 mb-6">
+                                    Our flagship collection combines modern aesthetics with unparalleled comfort.
+                                    Designed for the urban professional who values both style and substance.
+                                </p>
+                                <a href="#"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium self-start">
+                                    Explore Collection
+                                </a>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="1.png"
+                                    alt="Professional model wearing GeminiWear Urban Elegance collection in a modern office environment"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item min-w-full flex flex-col md:flex-row">
+                            <div class="md:w-1/2 p-8 bg-white flex flex-col justify-center">
+                                <span class="text-red-600 font-medium mb-2">NEW COLLECTION</span>
+                                <h3 class="text-3xl font-bold text-gray-800 mb-4">Weekend Comfort</h3>
+                                <p class="text-gray-600 mb-6">
+                                    Relaxed fits with premium fabrics that don't sacrifice style for comfort. Perfect
+                                    for your downtime without compromising on looking your best.
+                                </p>
+                                <a href="#"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium self-start">
+                                    Explore Collection
+                                </a>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="2.png"
+                                    alt="Casual models in GeminiWear Weekend Comfort line enjoying outdoor activities in a park setting"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item min-w-full flex flex-col md:flex-row">
+                            <div class="md:w-1/2 p-8 bg-white flex flex-col justify-center">
+                                <span class="text-red-600 font-medium mb-2">NEW COLLECTION</span>
+                                <h3 class="text-3xl font-bold text-gray-800 mb-4">Performance Active</h3>
+                                <p class="text-gray-600 mb-6">
+                                    Technical fabrics meet athletic aesthetics. Whether you're hitting the gym or just
+                                    running errands, our activewear moves with you.
+                                </p>
+                                <a href="#"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium self-start">
+                                    Explore Collection
+                                </a>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="3.png"
+                                    alt="Athletes wearing GeminiWear Performance Active line working out in a modern gym with natural light"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-item min-w-full flex flex-col md:flex-row">
+                            <div class="md:w-1/2 p-8 bg-white flex flex-col justify-center">
+                                <span class="text-red-600 font-medium mb-2">LIMITED EDITION</span>
+                                <h3 class="text-3xl font-bold text-gray-800 mb-4">Heritage Classics</h3>
+                                <p class="text-gray-600 mb-6">
+                                    Timeless pieces with a contemporary twist. These wardrobe essentials are crafted to
+                                    last and designed to transcend seasonal trends.
+                                </p>
+                                <a href="#"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium self-start">
+                                    Explore Collection
+                                </a>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="4.png"
+                                    alt="Sophisticated models in GeminiWear Heritage Classics line posing in a luxurious loft setting"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="carousel-item min-w-full flex flex-col md:flex-row">
+                            <div class="md:w-1/2 p-8 bg-white flex flex-col justify-center">
+                                <span class="text-red-600 font-medium mb-2">BEST SELLER</span>
+                                <h3 class="text-3xl font-bold text-gray-800 mb-4">Essential Basics</h3>
+                                <p class="text-gray-600 mb-6">
+                                    The foundation of a versatile wardrobe. Premium quality essentials you'll reach for
+                                    every day, designed with attention to detail.
+                                </p>
+                                <a href="#"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium self-start">
+                                    Explore Collection
+                                </a>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="5.png"
+                                    alt="Minimalist display of GeminiWear Essential Basics line with neutral tones on industrial-style shelves"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button id="prevBtn"
+                    class="carousel-control absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn"
+                    class="carousel-control absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 focus:outline-none"
+                        data-index="0"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 focus:outline-none"
+                        data-index="1"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 focus:outline-none"
+                        data-index="2"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 focus:outline-none"
+                        data-index="3"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-gray-300 focus:outline-none"
+                        data-index="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 slide-in">
+                    <h2 class="text-4xl font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-300 mb-6">
+                        Founded in 2015, GeminiWear was born from a simple idea: clothing should feel as good as it
+                        looks. Our founders, two fashion industry veterans, set out to create a brand that balanced
+                        style and comfort without compromise.
+                    </p>
+                    <p class="text-gray-300 mb-8">
+                        Today, we're proud to be a leader in sustainable, high-quality apparel with a commitment to
+                        ethical manufacturing and innovative design.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-gray-700 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-amber-400">50k+</h3>
+                            <p class="text-gray-300">Happy Customers</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-amber-400">8</h3>
+                            <p class="text-gray-300">Global Awards</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-amber-400">100%</h3>
+                            <p class="text-gray-300">Ethically Sourced</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-amber-400">5*</h3>
+                            <p class="text-gray-300">Customer Rating</p>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium inline-block">
+                        Read Our Journey
+                    </a>
+                </div>
+
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="500600.png"
+                        alt="GeminiWear founders shaking hands at their first store opening celebration with employees cheering in the background"
+                        class="rounded-lg h-full object-cover shadow-lg row-span-2" />
+                    <img src="11 (3).png"
+                        alt="Interior of GeminiWear's sustainable production facility showing workers at modern sewing stations"
+                        class="rounded-lg h-full object-cover shadow-lg" />
+                    <img src="11 (2).png"
+                        alt="Textile warehouse with racks of premium eco-friendly fabrics used in GeminiWear products"
+                        class="rounded-lg h-full object-cover shadow-lg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Beyond apparel, we offer premium services to enhance your GeminiWear experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-amber-500 text-4xl mb-6">
+                        <i class="fas fa-user-edit"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Personal Styling</h3>
+                    <p class="text-gray-600 mb-6">
+                        Our expert stylists work with you to create a customized wardrobe that fits your lifestyle and
+                        personal aesthetic.
+                    </p>
+                    <a href="#"
+                        class="text-amber-500 font-medium hover:text-amber-600 transition duration-300 inline-flex items-center">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-amber-500 text-4xl mb-6">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Custom Tailoring</h3>
+                    <p class="text-gray-600 mb-6">
+                        Each piece can be customized to your exact measurements and preferences for a perfect fit and
+                        personalized details.
+                    </p>
+                    <a href="#"
+                        class="text-amber-500 font-medium hover:text-amber-600 transition duration-300 inline-flex items-center">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-amber-500 text-4xl mb-6">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Care & Repair</h3>
+                    <p class="text-gray-600 mb-6">
+                        Extend the life of your favorite pieces with our professional cleaning, care, and repair
+                        services.
+                    </p>
+                    <a href="#"
+                        class="text-amber-500 font-medium hover:text-amber-600 transition duration-300 inline-flex items-center">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Hear from those who've experienced the GeminiWear difference.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "The quality is unmatched. I've had my GeminiWear pieces for years and they still look new. The
+                        fit is perfect every time."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="c1.png"
+                            alt="Professional headshot of satisfied customer Sarah Johnson, a marketing executive"
+                            class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-gray-500">Marketing Executive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Their personal styling service changed how I dress for work. I get compliments daily and
+                        finally feel confident in my outfits."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="c2.png" alt="Portrait of happy customer Michael Chen, a tech entrepreneur"
+                            class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <p class="text-gray-500">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "As someone who cares about sustainability, I appreciate GeminiWear's commitment to ethical
+                        production without sacrificing style."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="c3.png"
+                            alt="Smiling photo of loyal customer David Rodriguez, environmental consultant"
+                            class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold text-gray-800">David Rodriguez</h4>
+                            <p class="text-gray-500">Environmental Consultant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-red-700 to-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Upgrade Your Wardrobe?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Join thousands of satisfied customers experiencing the GeminiWear difference.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="btn bg-white hover:bg-gray-100 text-amber-600 px-8 py-3 rounded-full font-medium">
+                    Shop New Arrivals
+                </a>
+                <a href="#"
+                    class="btn border-2 border-white hover:bg-white hover:text-amber-600 px-8 py-3 rounded-full font-medium">
+                    Book a Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 slide-in">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8">
+                        Have questions or want to learn more about our collections and services? Our team is here to
+                        help.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-amber-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Our Showroom</h4>
+                                <p class="text-gray-600">2A, Newtown Square Building, 2nd Floor,
+                                    Above Spencer’s, Near Chinar Park,
+                                    Kolkata – 700136
+                                </p>
+                                <p class="text-gray-600">New York, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-amber-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Call Us</h4>
+                                <p class="text-gray-600">+91 98312 02364</p>
+                                <p class="text-gray-600">Mon-Sat, 9am-9pm </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-amber-500 text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email Us</h4>
+                                <p class="text-gray-600">info@geminiwear.com</p>
+                                <p class="text-gray-600">Customer Service</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-amber-500 text-xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-amber-500 text-xl">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-amber-500 text-xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-amber-500 text-xl">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                                placeholder="John Doe">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                                placeholder="your@email.com">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                                placeholder="How can we help?">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                                placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="flex items-center mb-6">
+                        <img src="lastlogo.png"
+                            alt="GeminiWear company logo - modern minimalist textile design with two parallel G shapes forming a stylish monogram"
+                            class="h-10" />
+                    </a>
+                    <p class="text-gray-400 max-w-xs">
+                        Premium apparel designed for those who value quality, comfort, and sustainable style.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a>
+                            </li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a>
+                            </li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Press</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-white transition duration-300">Sustainability</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Shop</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#"
+                                    class="text-gray-400 hover:text-white transition duration-300">Collections</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Best
+                                    Sellers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">New
+                                    Arrivals</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sale</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact
+                                    Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQs</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shipping</a>
+                            </li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Returns</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2023 GeminiWear. All rights reserved.
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Accessibility</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+        // Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.carousel-item');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // Initialize carousel
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.transform = `translateX(-${index * 100}%)`;
+                });
+
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('bg-amber-500');
+                        indicator.classList.remove('bg-gray-300');
+                    } else {
+                        indicator.classList.add('bg-gray-300');
+                        indicator.classList.remove('bg-amber-500');
+                    }
+                });
+
+                currentIndex = index;
+            }
+
+            // Next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            }
+
+            // Previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                showSlide(currentIndex);
+            }
+
+            // Button events
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Indicator click events
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+
+            // Auto-advance slides every 5 seconds
+            // let slideInterval = setInterval(nextSlide, 5000);
+
+            // Pause on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            carouselContainer.addEventListener('mouseenter', () => {
+                // clearInterval(slideInterval);
+            });
+
+            carouselContainer.addEventListener('mouseleave', () => {
+                // slideInterval = setInterval(nextSlide, 5000);
+            });
+
+            // Initialize first slide
+            showSlide(0);
+
+            // Sticky Header on Scroll
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('sticky-nav');
+                } else {
+                    header.classList.remove('sticky-nav');
+                }
+            });
+
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Animate elements on scroll
+            const animateOnScroll = function () {
+                const elements = document.querySelectorAll('.slide-in');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateX(0)';
+                    }
+                });
+            };
+
+            // Set initial state for animated elements
+            document.querySelectorAll('.slide-in').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateX(-50px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load for elements already in view
         });
     </script>
 </body>
